@@ -11,9 +11,8 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
 import { useNavigate } from 'react-router-dom';
-import { Button, ListItemText } from '@mui/material';
+import { ListItemText, ListItemButton } from '@mui/material';
 
 const classes = {
   navHeading: {
@@ -168,13 +167,11 @@ export default function NavBar({ children }: Props) {
         </DrawerHeader>
         <Divider />
         <List>
-          {/* <Routes> */}
           {navigationMenu.map((navItem, index) => (
-            <ListItem sx={classes.listItemTextStyle} key={index} onClick={() => nav(navItem.destination)}>
+            <ListItemButton sx={classes.listItemTextStyle} key={index} onClick={() => nav(navItem.destination)}>
               <ListItemText primary={navItem.text} />
-            </ListItem>
+            </ListItemButton>
           ))}
-          {/* </Routes> */}
         </List>
       </Drawer>
       <Main open={open}>
