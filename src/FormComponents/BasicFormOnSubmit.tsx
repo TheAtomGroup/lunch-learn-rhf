@@ -65,14 +65,6 @@ export const BasicFormOnSubmit = () => {
           }
         />
 
-        <RHFController
-          errorMessage={"this is required"}
-          required={true}
-          error={undefined}
-          defaultValue={"test"}
-          fieldName={"new_field"}
-        />
-
         <Button type="submit">Submit</Button>
         {
           formData ?
